@@ -1,7 +1,11 @@
 import os, json
 import openai
+from dotenv import load_dotenv
 
-openai.organization = "org-sAnQwPNnbSrHg1XyR4QYALf7"
+# Load environment variables from .env file
+load_dotenv()
+
+openai.organization = os.environ.get('OPENAI_ORGANIZATION')
 openai.api_key = os.environ.get('OPENAI_API_KEY')
 # MODEL_NAME = "gpt-3.5-turbo-16k"
 MODEL_NAME = "gpt-4"
