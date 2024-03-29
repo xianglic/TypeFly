@@ -4,7 +4,6 @@ from dotenv import load_dotenv
 
 # Load environment variables from .env file
 load_dotenv()
-
 openai.organization = os.environ.get('OPENAI_ORGANIZATION')
 openai.api_key = os.environ.get('OPENAI_API_KEY')
 # MODEL_NAME = "gpt-3.5-turbo-16k"
